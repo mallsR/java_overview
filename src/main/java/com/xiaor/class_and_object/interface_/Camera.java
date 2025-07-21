@@ -1,0 +1,17 @@
+package com.xiaor.class_and_object.interface_;
+
+import lombok.extern.slf4j.Slf4j;
+
+@Slf4j
+public class Camera implements UsbInterface{
+
+    @Override
+    public void start() {
+        log.debug("相机开始工作...");
+    }
+
+    @Override
+    public void stop() {
+        log.debug("相机停止工作...");
+    }
+}
