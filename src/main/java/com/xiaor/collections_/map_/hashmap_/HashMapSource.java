@@ -1,4 +1,4 @@
-package com.xiaor.collections_.hashset_.map_;
+package com.xiaor.collections_.map_.hashmap_;
 
 import java.util.HashMap;
 
