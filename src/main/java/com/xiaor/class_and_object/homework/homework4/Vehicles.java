@@ -1,6 +1,6 @@
 package com.xiaor.class_and_object.homework.homework4;
 
-interface Vehicles {
+public interface Vehicles {
     public void work();
 }
 
