@@ -29,7 +29,7 @@ public class SocketClient {
 
         // 3. 传输字符流
         BufferedWriter bufferedWriter = new BufferedWriter(new OutputStreamWriter(outputStream));
-        bufferedWriter.write("hello, server");
+        bufferedWriter.write("hello, server 字符流");
         bufferedWriter.newLine();       // 插入换行符,表示写入内容结束, 要求对方使用 readLine()方法, 以此来判断接收完毕
         bufferedWriter.flush();     // 字符流: 务必手动刷新,不然无法写入数据通道
 

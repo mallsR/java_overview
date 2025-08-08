@@ -23,6 +23,9 @@ public class SocketServer {
         // 获取socket的输入流
         InputStream inputStream = socket.getInputStream();
 
+        /**
+         *  通过字节流传输数据
+         */
 //        // 通过输入流接收数据  [接收的是字节流]
 //        byte[] bytes = new byte[1024];
 //        int readLen = 0;
@@ -36,6 +39,9 @@ public class SocketServer {
 //        socket.shutdownOutput();    // 设置结束标记
 
 
+        /**
+         *  通过字符流传输数据
+         */
         // IO读取,使用字符流, 使用InputStreamReader将inputStream转换为字符流
         BufferedReader bufferedReader = new BufferedReader(new InputStreamReader(inputStream));
         String s = bufferedReader.readLine();
@@ -44,7 +50,7 @@ public class SocketServer {
         // IO写入,使用字符流, 使用OutputStreamWriter将outputStream转换为字符流
         OutputStream outputStream = socket.getOutputStream();
         BufferedWriter bufferedWriter = new BufferedWriter(new OutputStreamWriter(outputStream));
-        bufferedWriter.write("hello, client");
+        bufferedWriter.write("hello, client 字符流");
         bufferedWriter.newLine();
         bufferedWriter.flush();
 
@@ -58,5 +64,6 @@ public class SocketServer {
 
         socket.close();
         serverSocket.close();
+        System.out.println("服务器退出...");
     }
 }
