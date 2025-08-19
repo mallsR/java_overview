@@ -1,4 +1,4 @@
-package com.xiaor.stage3.reflection_.create_instance_;
+package com.xiaor.stage3.reflection_.access_private_;
 
 import java.lang.reflect.Constructor;
 import java.lang.reflect.InvocationTargetException;
@@ -13,7 +13,7 @@ public class ReflectCreateInstance_ {
     public static void main(String[] args) throws ClassNotFoundException {
 
         // 1. 获取User类的Class对象
-        Class<?> userClass = Class.forName("com.xiaor.stage3.reflection_.create_instance_.User");
+        Class<?> userClass = Class.forName("com.xiaor.stage3.reflection_.access_private_.User");
 
         // 2. 通过public的无参构造器创建对象
         try {
