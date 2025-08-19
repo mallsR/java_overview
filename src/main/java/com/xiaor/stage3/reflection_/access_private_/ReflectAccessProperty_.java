@@ -22,6 +22,7 @@ public class ReflectAccessProperty_ {
         try {
             Field name = studentClass.getField("name");
             name.set(student, "xiaoR");
+            // 如果name是static,则此处可以写为name.set(null, "xiaoR");
             System.out.println(name.getName() + ": " + name.get(student));
             System.out.printf("student: %s\n", student);
         } catch (NoSuchFieldException e) {
@@ -35,7 +36,7 @@ public class ReflectAccessProperty_ {
             age.setAccessible(true);    // 暴破
             age.set(student, 27);
             System.out.println(age.getName() + ": " + age.get(student));
-            System.out.println(String.format("student: %s\n", student));
+            System.out.printf("student: %s\n%n", student);
         } catch (NoSuchFieldException e) {
             throw new RuntimeException(e);
         }
