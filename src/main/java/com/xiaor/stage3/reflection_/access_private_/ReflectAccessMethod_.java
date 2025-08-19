@@ -20,6 +20,7 @@ public class ReflectAccessMethod_ {
         Employee employee = (Employee) constructor.newInstance();
         // 3. 获取Employee类中的public方法
         Method work = employeeClass.getMethod("work", float.class);
+        // 反射调用的方法默认的返回值是Object类型,但实际的运行类型,还是跟方法的返回值类型一致
         Object fruit = work.invoke(employee, 2200f);
         System.out.printf("劳动收获: %s\n",  fruit);
         System.out.println("=======================================");
